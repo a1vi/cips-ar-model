@@ -77,6 +77,108 @@ x      = t_FE E_FE + D (1/C_i + 1/C_FG) + psi_s
 
 with the ferroelectric represented as an ensemble of hysterons with a Gaussian coercive-field distribution. Units are cm, V, C and F. See the manuscript for the derivation, parameters and their provenance.
 
+## Figures
+
+### Fig. 1 — Device schematic
+
+![Fig. 1: MFMIS device schematic](figures/fig1_schematic.png)
+
+The MFMIS (Metal–Ferroelectric–Metal–Insulator–Semiconductor) stack. A CuInP₂S₆ (CIPS) ferroelectric capacitor of area A_FE sits above a neutral floating gate, which couples to a semiconductor channel capacitor of area A_ch. The floating-gate area ratio A_R = A_FE / A_ch is the central design variable of this work.
+
+---
+
+### Fig. 2 — Memory window vs. A_R
+
+![Fig. 2: Memory window as a function of area ratio](figures/fig2_window_vs_AR.png)
+
+Memory window (MW) plotted against A_R for a 6 V program/erase drive. The window rises steeply for A_R < 1 (ferroelectric-limited regime), reaches a broad maximum, then decays for A_R > A_R,sat (channel-limited / saturation regime). The analytic model (solid curves) tracks the full self-consistent solver (markers) across the entire range.
+
+---
+
+### Fig. 3 — Window collapse and drive efficiency
+
+![Fig. 3: Window collapse and drive efficiency](figures/fig3_collapse_and_drive.png)
+
+Left: the memory window collapses at high A_R because an increasing fraction of the applied voltage drops across the channel rather than the ferroelectric. Right: drive efficiency η = MW / V_drive as a function of A_R, showing an optimum near A_R ≈ 0.2–0.3 for typical CIPS stacks.
+
+---
+
+### Fig. 4 — 2-D design maps
+
+![Fig. 4: Design maps over the A_R and drive space](figures/fig4_design_maps.png)
+
+Colour maps of memory window over the (A_R, V_drive) parameter space for different ferroelectric thicknesses. Iso-window contours guide device engineers toward minimum-area designs that still meet a target MW specification.
+
+---
+
+### Fig. 5 — Effect of interface traps
+
+![Fig. 5: Interface trap effect on memory window](figures/fig5_traps.png)
+
+Interface trap charge Q_it shifts the flat-band voltage and asymmetrically modifies the programme and erase windows. Increasing trap density progressively narrows the net memory window and shifts the optimal A_R toward lower values.
+
+---
+
+### Fig. 6 — Screening and cycling degradation
+
+![Fig. 6: Screening and cycling](figures/fig6_screening_and_cycling.png)
+
+Left: incomplete polarisation reversal (screening) reduces the effective remanent polarisation and shrinks the window. Right: endurance simulation showing window evolution over repeated P/E cycles, capturing fatigue-like degradation through a cycling-dependent coercive-field spread.
+
+---
+
+### Fig. 7 — Analytic model verification
+
+![Fig. 7: Verification of the analytic window model](figures/fig7_verification.png)
+
+Parity plot of analytic MW predictions vs. the full self-consistent solver across 290 randomly sampled MFMIS stacks spanning wide ranges of thickness, dielectric constant, doping and coercive-field spread. The root-mean-square error is < 1% of the drive voltage, confirming the analytic formula is a reliable surrogate.
+
+---
+
+### Fig. 8 — A_R extraction from published data
+
+![Fig. 8: Monte-Carlo extraction of effective area ratio](figures/fig8_extraction.png)
+
+Bayesian (Monte-Carlo) inversion recovers the effective A_R from a reported memory-window value and device geometry. Posterior distributions are shown for three literature devices, demonstrating that A_R can be extracted with ~10% uncertainty even when the floating-gate geometry is not directly measured.
+
+---
+
+### Fig. 9 — Chip-level prediction
+
+![Fig. 9: Chip-level window prediction from extracted A_R](figures/fig9_chip_prediction.png)
+
+Forward prediction of the memory window for a designed chip geometry using the extracted A_R posteriors from Fig. 8. The 90% credible intervals remain narrow enough to be practically useful for pre-fabrication design review.
+
+---
+
+### Fig. 10 — Thickness scaling and drive efficiency
+
+![Fig. 10: Thickness scaling and drive efficiency](figures/fig10_thickness_efficiency.png)
+
+Memory window and drive efficiency as functions of ferroelectric thickness t_FE and insulator thickness t_i. Thinner insulators and thicker ferroelectrics improve efficiency but are constrained by leakage and breakdown; the design maps help find the Pareto-optimal trade-off.
+
+---
+
+### Fig. 11–13 — 3-D parameter space
+
+| Stack geometry | Design maps | Thickness & efficiency |
+|:---:|:---:|:---:|
+| ![Fig. 11](figures/fig11_3d_stack.png) | ![Fig. 12](figures/fig12_3d_design_maps.png) | ![Fig. 13](figures/fig13_3d_thickness_efficiency.png) |
+
+Three-dimensional visualisations of the MFMIS parameter space. Fig. 11 shows the stack geometry in 3-D. Fig. 12 extends the design maps to a third axis (coercive-field spread σ_Ec), revealing how process variability shifts the optimal A_R. Fig. 13 shows the joint thickness–efficiency landscape in 3-D.
+
+---
+
+### Fig. 14–15 — Retention
+
+| Retention vs. time | 3-D retention landscape |
+|:---:|:---:|
+| ![Fig. 14](figures/fig14_retention.png) | ![Fig. 15](figures/fig15_3d_retention.png) |
+
+Thermally activated (Merz-type) retention model. Fig. 14 shows the memory window as a function of retention time for several A_R values; the window decays faster at high A_R because the floating-gate potential re-depoles the ferroelectric. Fig. 15 extends this to a 3-D surface over (A_R, time), showing that a lower A_R is preferable when long retention is critical.
+
+---
+
 ## Limitations
 
 This is a model study. Parameters that are assumed rather than measured (program drive, floating-gate series capacitance, retention parameters `tau0`, `b`, `n`) are documented in the manuscript. The retention model is illustrative and is not fitted to measured CuInP₂S₆ retention data.
