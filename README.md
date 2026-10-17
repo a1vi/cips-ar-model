@@ -193,4 +193,4 @@ MIT, see `LICENSE`.
 
 ## Contact
 
-Md. Atair Rahman Alvi, Department of Electrical and Electronic Engineering, BRAC University, Dhaka, Bangladesh. atair.rahman@bracu.ac.bd
+Md. Atair Rahman Alvi, Department of Electrical and Electronic Engineering, BRAC University, Dhaka, Bangladesh. alvialvi91@gmail.com
