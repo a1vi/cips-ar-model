@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the associated manuscript."
+title: "cips-ar-model: code and data for the floating-gate area ratio study of CuInP2S6 MFMIS transistors"
+authors:
+  - family-names: Alvi
+    given-names: Md. Atair Rahman
+    affiliation: "Department of Electrical and Electronic Engineering, BRAC University, Dhaka, Bangladesh"
+    email: atair.rahman@bracu.ac.bd
+license: MIT
+repository-code: "https://github.com/USERNAME/cips-ar-model"
